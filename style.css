@@ -295,3 +295,96 @@ nav{
 
 
 }
+
+.productos {
+    padding: 70px 8%;
+    background: #ffffff;
+}
+
+.productos h2 {
+    text-align: center;
+    font-size: 35px;
+    margin-bottom: 40px;
+}
+
+.productos-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.producto-card {
+    background: #ffffff;
+    border: 1px solid #e7e7e7;
+    border-radius: 14px;
+    overflow: hidden;
+    transition: 0.3s;
+}
+
+.producto-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+}
+
+.producto-imagen {
+    height: 260px;
+    background: #f3f3f3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #777;
+}
+
+.producto-info {
+    padding: 22px;
+}
+
+.producto-marca {
+    font-size: 13px;
+    color: #777;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.producto-info h3 {
+    margin: 8px 0;
+    font-size: 20px;
+}
+
+.producto-detalle {
+    color: #666;
+    margin-bottom: 12px;
+}
+
+.producto-precio {
+    font-size: 23px;
+    font-weight: bold;
+    margin-bottom: 18px;
+}
+
+.boton-comprar {
+    display: inline-block;
+    padding: 12px 22px;
+    background: #000;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 6px;
+}
+
+.boton-comprar:hover {
+    background: #333;
+}
+
+@media (max-width: 900px) {
+    .productos-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .productos-grid {
+        grid-template-columns: 1fr;
+    }
+}
