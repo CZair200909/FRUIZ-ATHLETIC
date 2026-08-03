@@ -849,3 +849,233 @@ background:#1b9de7;
 transform:scale(1.05);
 
 }
+
+/* ======================================
+   PÁGINAS DE CATÁLOGO
+====================================== */
+
+.catalogo-hero {
+    min-height: 430px;
+    padding: 155px 0 80px;
+    display: flex;
+    align-items: center;
+    background:
+        radial-gradient(
+            circle at 80% 25%,
+            rgba(55, 185, 255, 0.25),
+            transparent 35%
+        ),
+        linear-gradient(135deg, #050505, #111827);
+}
+
+.catalogo-hero-contenido {
+    text-align: center;
+}
+
+.catalogo-etiqueta,
+.catalogo-subtitulo {
+    color: #37b9ff;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.catalogo-hero h1 {
+    margin: 10px 0 15px;
+    font-size: clamp(48px, 8vw, 84px);
+    line-height: 1;
+}
+
+.catalogo-hero p:last-child {
+    max-width: 700px;
+    margin: auto;
+    color: #c7c7c7;
+    font-size: 18px;
+}
+
+.catalogo {
+    padding: 90px 0 120px;
+    background: #0d0d0d;
+}
+
+.catalogo-encabezado {
+    margin-bottom: 32px;
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    gap: 25px;
+}
+
+.catalogo-encabezado h2 {
+    margin-top: 5px;
+    font-size: 38px;
+}
+
+.contador-productos {
+    color: #aaa;
+}
+
+.filtros-marcas {
+    margin-bottom: 42px;
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.filtro {
+    padding: 11px 20px;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 999px;
+    background: #161616;
+    color: #fff;
+    font: inherit;
+    cursor: pointer;
+    transition: 0.25s;
+}
+
+.filtro:hover,
+.filtro.activo {
+    border-color: #37b9ff;
+    background: #37b9ff;
+    color: #04131c;
+}
+
+.catalogo-productos {
+    grid-template-columns:
+        repeat(auto-fit, minmax(280px, 340px));
+    justify-content: start;
+}
+
+.producto-catalogo {
+    padding: 0;
+    overflow: hidden;
+    text-align: left;
+}
+
+.producto-imagen-contenedor {
+    position: relative;
+    min-height: 310px;
+    padding: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f2f2f2;
+}
+
+.producto-imagen-contenedor img {
+    width: 100%;
+    height: 265px;
+    margin: 0;
+    object-fit: contain;
+}
+
+.producto-distintivo {
+    position: absolute;
+    top: 18px;
+    left: 18px;
+    padding: 7px 11px;
+    border-radius: 999px;
+    background: #071f2c;
+    color: #6ed0ff;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.producto-contenido {
+    padding: 25px;
+}
+
+.producto-marca {
+    margin-bottom: 7px;
+    color: #37b9ff !important;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+}
+
+.producto-tipo,
+.producto-talla {
+    color: #aaa !important;
+}
+
+.producto-contenido .price {
+    margin: 17px 0 8px;
+}
+
+.producto-contenido .buy-btn {
+    width: 100%;
+    text-align: center;
+}
+
+.sin-resultados {
+    display: none;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.sin-resultados h3 {
+    margin-bottom: 8px;
+    font-size: 27px;
+}
+
+.sin-resultados p {
+    color: #aaa;
+}
+
+.whatsapp-flotante {
+    position: fixed;
+    right: 24px;
+    bottom: 24px;
+    z-index: 1000;
+    width: 58px;
+    height: 58px;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    background: #25d366;
+    font-size: 27px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
+    transition: 0.25s;
+}
+
+.whatsapp-flotante:hover {
+    transform: translateY(-5px) scale(1.05);
+}
+
+.footer-logo {
+    height: 55px;
+    margin-bottom: 16px;
+}
+
+.footer a:hover {
+    color: #37b9ff;
+}
+
+.producto-catalogo[hidden] {
+    display: none;
+}
+
+@media (max-width: 700px) {
+    .catalogo-hero {
+        min-height: 360px;
+        padding-top: 125px;
+    }
+
+    .catalogo-encabezado {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .catalogo-encabezado h2 {
+        font-size: 31px;
+    }
+
+    .catalogo-productos {
+        grid-template-columns: 1fr;
+    }
+
+    .producto-imagen-contenedor {
+        min-height: 270px;
+    }
+}
