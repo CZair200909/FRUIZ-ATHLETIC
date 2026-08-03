@@ -7,7 +7,30 @@ CATÁLOGO DE PRODUCTOS
 const productosFruiz = [
 
     /* ZAPATILLAS PARA HOMBRE */
+    {
+        codigo: "COURT-ROYALE-2",
+        nombre: "Court Royale 2 NN",
+        marca: "Nike",
+        categoria: "zapatillas",
+        publico: "Hombre",
+        tallas: ["9"],
+        unidades: 1,
+        precio: 200,
+        imagen: "../images/court-royale.jpg"
+    },
 
+    {
+        codigo: "TERRA-MANTA",
+        nombre: "Terra Manta",
+        marca: "Nike",
+        categoria: "zapatillas",
+        publico: "Hombre",
+        tallas: ["8.5"],
+        unidades: 1,
+        precio: 229,
+        imagen: "../images/terra-manta.jpg"
+    },
+    
     {
         codigo: "KJ1735",
         nombre: "Response Runner 2",
