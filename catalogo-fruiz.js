@@ -1,7 +1,7 @@
 /*======================================
 FRUIZ ATHLETIC
-CATÁLOGO DE MERCADERÍA
-40 PARES - 15 MODELOS
+CATÁLOGO DE PRODUCTOS
+41 PARES - 16 MODELOS
 ======================================*/
 
 const productosFruiz = [
@@ -98,6 +98,7 @@ const productosFruiz = [
         unidades: 2
     },
 
+
     /* ZAPATILLAS PARA MUJER */
 
     {
@@ -140,6 +141,7 @@ const productosFruiz = [
         unidades: 3
     },
 
+
     /* ZAPATILLAS DE FÚTBOL */
 
     {
@@ -152,27 +154,28 @@ const productosFruiz = [
         unidades: 3
     },
 
-{
-    codigo: "IH2115",
-    nombre: "Predator Club TF",
-    marca: "Adidas",
-    categoria: "futbol",
-    publico: "Hombre",
-    tallas: ["8½"],
-    unidades: 1
-},
+    {
+        codigo: "IH2115",
+        nombre: "Predator Club TF",
+        marca: "Adidas",
+        categoria: "futbol",
+        publico: "Hombre",
+        tallas: ["8½"],
+        unidades: 1
+    },
 
-{
-    codigo: "PHANTOM-GX2",
-    nombre: "Phantom GX II Club TF",
-    marca: "Nike",
-    categoria: "futbol",
-    publico: "Hombre",
-    tallas: ["9"],
-    unidades: 1,
-    precio: 229,
-    imagen: "../images/phantom-gx2.jpg"
-}
+    {
+        codigo: "PHANTOM-GX2",
+        nombre: "Phantom GX II Club TF",
+        marca: "Nike",
+        categoria: "futbol",
+        publico: "Hombre",
+        tallas: ["9"],
+        unidades: 1,
+        precio: 229,
+        imagen: "../images/phantom-gx2.jpg"
+    }
+
 ];
 
 
@@ -180,7 +183,7 @@ const productosFruiz = [
 NORMALIZAR TEXTO
 ======================================*/
 
-function normalizar(texto){
+function normalizar(texto) {
 
     return String(texto)
 
@@ -194,10 +197,70 @@ function normalizar(texto){
 
 
 /*======================================
-CREAR TARJETA DEL PRODUCTO
+CREAR TARJETA
 ======================================*/
 
-function crearTarjeta(producto){
+function crearTarjeta(producto) {
+
+    let imagenProducto;
+
+    if (producto.imagen) {
+
+        imagenProducto = `
+
+            <img
+                src="${producto.imagen}"
+                alt="${producto.marca} ${producto.nombre}"
+            >
+
+        `;
+
+    } else {
+
+        imagenProducto = `
+
+            <div class="placeholder-contenido">
+
+                <strong>
+                    ${producto.marca}
+                </strong>
+
+                <span>
+                    FOTO PRÓXIMAMENTE
+                </span>
+
+                <small>
+                    ${producto.codigo}
+                </small>
+
+            </div>
+
+        `;
+
+    }
+
+
+    let precioProducto = "";
+
+    if (producto.precio) {
+
+        precioProducto = `
+
+            <p class="price">
+                S/ ${producto.precio}
+            </p>
+
+        `;
+
+    }
+
+
+    const textoPrecio = producto.precio
+
+        ? ` Precio: S/ ${producto.precio}.`
+
+        : "";
+
 
     const mensaje = encodeURIComponent(
 
@@ -213,59 +276,41 @@ function crearTarjeta(producto){
 
         producto.tallas.join(", ") +
 
-        " US."
+        " US." +
+
+        textoPrecio
 
     );
+
+
+    const claseImagen = producto.imagen
+
+        ? ""
+
+        : "producto-placeholder";
+
 
     return `
 
         <article
-
             class="product-card producto-catalogo"
-
             data-marca="${normalizar(producto.marca)}"
-
             data-nombre="${normalizar(
-
                 producto.marca + " " +
-
                 producto.nombre + " " +
-
                 producto.codigo
-
             )}"
-
         >
 
-            <div class="producto-imagen-contenedor producto-placeholder">
+            <div
+                class="producto-imagen-contenedor ${claseImagen}"
+            >
 
                 <span class="producto-distintivo">
-
                     DISPONIBLE
-
                 </span>
 
-                <div class="placeholder-contenido">
-
-                    <strong>
-
-                        ${producto.marca}
-
-                    </strong>
-
-                    <span>
-
-                        FOTO PRÓXIMAMENTE
-
-                    </span>
-
-                    <small>
-
-                        ${producto.codigo}
-
-                    </small>
-
-                </div>
+                ${imagenProducto}
 
             </div>
 
@@ -273,15 +318,11 @@ function crearTarjeta(producto){
             <div class="producto-contenido">
 
                 <p class="producto-marca">
-
                     ${producto.marca.toUpperCase()}
-
                 </p>
 
                 <h3>
-
                     ${producto.nombre}
-
                 </h3>
 
                 <p class="producto-tipo">
@@ -292,9 +333,13 @@ function crearTarjeta(producto){
 
                 </p>
 
+                ${precioProducto}
+
                 <p class="producto-talla">
 
-                    <strong>Tallas disponibles:</strong>
+                    <strong>
+                        Tallas disponibles:
+                    </strong>
 
                     ${producto.tallas.join(" · ")} US
 
@@ -305,23 +350,16 @@ function crearTarjeta(producto){
                     ${producto.unidades}
 
                     ${producto.unidades === 1
-
                         ? "par disponible"
-
                         : "pares disponibles"}
 
                 </p>
 
                 <a
-
                     class="buy-btn"
-
                     href="https://wa.me/51934105748?text=${mensaje}"
-
                     target="_blank"
-
                     rel="noopener noreferrer"
-
                 >
 
                     Consultar por WhatsApp
@@ -341,21 +379,24 @@ function crearTarjeta(producto){
 INICIAR CATÁLOGO
 ======================================*/
 
-function iniciarCatalogoFruiz(){
+function iniciarCatalogoFruiz() {
 
     const contenedor =
 
         document.getElementById("catalogoProductos");
 
-    if(!contenedor){
+
+    if (!contenedor) {
 
         return;
 
     }
 
+
     const categoria =
 
         contenedor.dataset.categoria || "todos";
+
 
     const inventario = productosFruiz.filter(
 
@@ -367,6 +408,7 @@ function iniciarCatalogoFruiz(){
 
     );
 
+
     contenedor.innerHTML =
 
         inventario.map(crearTarjeta).join("");
@@ -376,22 +418,26 @@ function iniciarCatalogoFruiz(){
 
         document.querySelector(".search input");
 
+
     const filtros =
 
         document.querySelectorAll(".filtro");
+
 
     const contador =
 
         document.getElementById("contadorProductos");
 
+
     const sinResultados =
 
         document.getElementById("sinResultados");
 
+
     let marcaSeleccionada = "todos";
 
 
-    function filtrarProductos(){
+    function filtrarProductos() {
 
         const busqueda = normalizar(
 
@@ -403,13 +449,18 @@ function iniciarCatalogoFruiz(){
 
         );
 
+
         let visibles = 0;
 
-        const tarjetas = contenedor.querySelectorAll(
 
-            ".producto-catalogo"
+        const tarjetas =
 
-        );
+            contenedor.querySelectorAll(
+
+                ".producto-catalogo"
+
+            );
+
 
         tarjetas.forEach((tarjeta) => {
 
@@ -421,17 +472,27 @@ function iniciarCatalogoFruiz(){
 
                 marcaSeleccionada;
 
+
             const coincideBusqueda =
 
-                tarjeta.dataset.nombre.includes(busqueda);
+                tarjeta.dataset.nombre.includes(
+
+                    busqueda
+
+                );
+
 
             const mostrar =
 
-                coincideMarca && coincideBusqueda;
+                coincideMarca &&
+
+                coincideBusqueda;
+
 
             tarjeta.hidden = !mostrar;
 
-            if(mostrar){
+
+            if (mostrar) {
 
                 visibles++;
 
@@ -440,7 +501,7 @@ function iniciarCatalogoFruiz(){
         });
 
 
-        if(contador){
+        if (contador) {
 
             contador.textContent =
 
@@ -455,7 +516,7 @@ function iniciarCatalogoFruiz(){
         }
 
 
-        if(sinResultados){
+        if (sinResultados) {
 
             sinResultados.style.display =
 
@@ -480,11 +541,14 @@ function iniciarCatalogoFruiz(){
 
             });
 
+
             boton.classList.add("activo");
+
 
             marcaSeleccionada =
 
                 boton.dataset.marca;
+
 
             filtrarProductos();
 
@@ -493,7 +557,7 @@ function iniciarCatalogoFruiz(){
     });
 
 
-    if(buscador){
+    if (buscador) {
 
         buscador.addEventListener(
 
@@ -505,38 +569,37 @@ function iniciarCatalogoFruiz(){
 
     }
 
+
     filtrarProductos();
 
 }
 
 
 /*======================================
-ESTILOS DEL ESPACIO PARA LA FOTO
+ESTILOS DEL CATÁLOGO
 ======================================*/
 
 const estilosCatalogoFruiz =
 
     document.createElement("style");
 
+
 estilosCatalogoFruiz.textContent = `
 
-    .producto-placeholder{
+    .producto-placeholder {
 
         background:linear-gradient(
-
             145deg,
-
             #eeeeee,
-
             #d8d8d8
-
         );
 
         color:#111;
 
     }
 
-    .placeholder-contenido{
+
+    .placeholder-contenido {
 
         display:grid;
 
@@ -546,7 +609,8 @@ estilosCatalogoFruiz.textContent = `
 
     }
 
-    .placeholder-contenido strong{
+
+    .placeholder-contenido strong {
 
         font-size:30px;
 
@@ -554,7 +618,8 @@ estilosCatalogoFruiz.textContent = `
 
     }
 
-    .placeholder-contenido span{
+
+    .placeholder-contenido span {
 
         color:#666;
 
@@ -566,7 +631,8 @@ estilosCatalogoFruiz.textContent = `
 
     }
 
-    .placeholder-contenido small{
+
+    .placeholder-contenido small {
 
         color:#333;
 
@@ -576,7 +642,8 @@ estilosCatalogoFruiz.textContent = `
 
     }
 
-    .producto-stock{
+
+    .producto-stock {
 
         margin-top:8px;
 
@@ -588,13 +655,28 @@ estilosCatalogoFruiz.textContent = `
 
     }
 
-    .producto-catalogo[hidden]{
+
+    .producto-catalogo[hidden] {
 
         display:none;
 
     }
 
+
+    .producto-imagen-contenedor img {
+
+        width:100%;
+
+        height:265px;
+
+        margin:0;
+
+        object-fit:contain;
+
+    }
+
 `;
+
 
 document.head.appendChild(
 
@@ -602,6 +684,10 @@ document.head.appendChild(
 
 );
 
+
+/*======================================
+CARGAR CUANDO ABRA LA PÁGINA
+======================================*/
 
 document.addEventListener(
 
