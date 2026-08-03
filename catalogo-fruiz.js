@@ -169,9 +169,10 @@ const productosFruiz = [
     categoria: "futbol",
     publico: "Hombre",
     tallas: ["9"],
-    unidades: 1
+    unidades: 1,
+    precio: 229,
+    imagen: "../images/phantom-gx2.jpg"
 }
-
 ];
 
 
