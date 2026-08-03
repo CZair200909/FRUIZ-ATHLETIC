@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Zapatillas | Fruiz Athletic</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+
+<header class="header">
+
+    <div class="container">
+
+        <a class="logo" href="../index.html">
+            <img src="../images/logo.png" alt="Fruiz Athletic">
+        </a>
+
+        <nav class="nav">
+            <a href="../index.html">Inicio</a>
+            <a href="zapatillas.html">Zapatillas</a>
+            <a href="futbol.html">Fútbol</a>
+            <a href="accesorios.html">Accesorios</a>
+        </nav>
+
+        <div class="search">
+            <input
+                id="buscadorZapatillas"
+                type="search"
+                placeholder="Buscar zapatillas..."
+            >
+
+            <button type="button" aria-label="Buscar">
+                🔍
+            </button>
+        </div>
+
+    </div>
+
+</header>
+
+
+<main>
+
+    <section class="catalogo-hero">
+
+        <div class="container catalogo-hero-contenido">
+
+            <p class="catalogo-etiqueta">
+                CALZADO URBANO Y CASUAL
+            </p>
+
+            <h1>Zapatillas</h1>
+
+            <p>
+                Encuentra modelos para vestir de Nike, Adidas,
+                Puma y Punto Original.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <section class="catalogo">
+
+        <div class="container">
+
+            <div class="catalogo-encabezado">
+
+                <div>
+                    <p class="catalogo-subtitulo">COLECCIÓN DISPONIBLE</p>
+                    <h2>Zapatillas de vestir</h2>
+                </div>
+
+                <p id="contadorProductos" class="contador-productos">
+                    2 productos
+                </p>
+
+            </div>
+
+
+            <div class="filtros-marcas">
+
+                <button class="filtro activo" data-marca="todos">
+                    Todas
+                </button>
+
+                <button class="filtro" data-marca="nike">
+                    Nike
+                </button>
+
+                <button class="filtro" data-marca="adidas">
+                    Adidas
+                </button>
+
+                <button class="filtro" data-marca="puma">
+                    Puma
+                </button>
+
+                <button class="filtro" data-marca="punto-original">
+                    Punto Original
+                </button>
+
+            </div>
+
+
+            <div class="products catalogo-productos">
+
+                <article
+                    class="product-card producto-catalogo"
+                    data-marca="nike"
+                    data-nombre="Nike Court Royale 2 NN"
+                >
+
+                    <div class="producto-imagen-contenedor">
+
+                        <span class="producto-distintivo">
+                            DISPONIBLE
+                        </span>
+
+                        <img
+                            src="../images/court-royale.jpg"
+                            alt="Nike Court Royale 2 NN"
+                        >
+
+                    </div>
+
+                    <div class="producto-contenido">
+
+                        <p class="producto-marca">
+                            NIKE
+                        </p>
+
+                        <h3>Nike Court Royale 2 NN</h3>
+
+                        <p class="producto-tipo">
+                            Zapatilla casual para hombre
+                        </p>
+
+                        <p class="price">S/ 200</p>
+
+                        <p class="producto-talla">
+                            Talla disponible: 9 US
+                        </p>
+
+                        <a
+                            class="buy-btn"
+                            href="https://wa.me/51934105748?text=Hola,%20quiero%20consultar%20por%20las%20Nike%20Court%20Royale%202%20NN,%20talla%209%20US,%20precio%20S%2F%20200."
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            Consultar por WhatsApp
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+                <article
+                    class="product-card producto-catalogo"
+                    data-marca="nike"
+                    data-nombre="Nike Terra Manta"
+                >
+
+                    <div class="producto-imagen-contenedor">
+
+                        <span class="producto-distintivo">
+                            DISPONIBLE
+                        </span>
+
+                        <img
+                            src="../images/terra-manta.jpg"
+                            alt="Nike Terra Manta"
+                        >
+
+                    </div>
+
+                    <div class="producto-contenido">
+
+                        <p class="producto-marca">
+                            NIKE
+                        </p>
+
+                        <h3>Nike Terra Manta</h3>
+
+                        <p class="producto-tipo">
+                            Zapatilla urbana para hombre
+                        </p>
+
+                        <p class="price">S/ 229</p>
+
+                        <p class="producto-talla">
+                            Talla disponible: 8.5 US
+                        </p>
+
+                        <a
+                            class="buy-btn"
+                            href="https://wa.me/51934105748?text=Hola,%20quiero%20consultar%20por%20las%20Nike%20Terra%20Manta,%20talla%208.5%20US,%20precio%20S%2F%20229."
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            Consultar por WhatsApp
+                        </a>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+
+            <div id="sinResultados" class="sin-resultados">
+
+                <h3>No encontramos productos</h3>
+
+                <p>
+                    Prueba con otra marca o escribe otro nombre.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<a
+    class="whatsapp-flotante"
+    href="https://wa.me/51934105748?text=Hola,%20quiero%20consultar%20por%20las%20zapatillas%20disponibles."
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Contactar por WhatsApp"
+>
+    💬
+</a>
+
+
+<footer>
+
+    <div class="container footer">
+
+        <div>
+            <img
+                src="../images/logo.png"
+                alt="Fruiz Athletic"
+                class="footer-logo"
+            >
+
+            <p>
+                Zapatillas y artículos deportivos.
+            </p>
+        </div>
+
+        <div>
+            <h4>Categorías</h4>
+            <p><a href="zapatillas.html">Zapatillas</a></p>
+            <p><a href="futbol.html">Fútbol</a></p>
+            <p><a href="accesorios.html">Accesorios</a></p>
+        </div>
+
+        <div>
+            <h4>Contacto</h4>
+
+            <p>
+                <a
+                    href="https://wa.me/51934105748"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    WhatsApp: 934 105 748
+                </a>
+            </p>
+
+            <p>Virú, La Libertad</p>
+        </div>
+
+    </div>
+
+    <p class="copy">
+        © 2026 Fruiz Athletic. Todos los derechos reservados.
+    </p>
+
+</footer>
+
+
+<script>
+    const buscador = document.getElementById("buscadorZapatillas");
+    const filtros = document.querySelectorAll(".filtro");
+    const productos = document.querySelectorAll(".producto-catalogo");
+    const contador = document.getElementById("contadorProductos");
+    const sinResultados = document.getElementById("sinResultados");
+
+    let marcaSeleccionada = "todos";
+
+    function filtrarProductos() {
+        const busqueda = buscador.value.trim().toLowerCase();
+        let visibles = 0;
+
+        productos.forEach((producto) => {
+            const marca = producto.dataset.marca;
+            const nombre = producto.dataset.nombre.toLowerCase();
+
+            const coincideMarca =
+                marcaSeleccionada === "todos" ||
+                marca === marcaSeleccionada;
+
+            const coincideBusqueda = nombre.includes(busqueda);
+
+            const mostrar = coincideMarca && coincideBusqueda;
+
+            producto.hidden = !mostrar;
+
+            if (mostrar) {
+                visibles++;
+            }
+        });
+
+        contador.textContent =
+            visibles === 1
+                ? "1 producto"
+                : `${visibles} productos`;
+
+        sinResultados.style.display =
+            visibles === 0 ? "block" : "none";
+    }
+
+    filtros.forEach((boton) => {
+        boton.addEventListener("click", () => {
+            filtros.forEach((filtro) => {
+                filtro.classList.remove("activo");
+            });
+
+            boton.classList.add("activo");
+            marcaSeleccionada = boton.dataset.marca;
+
+            filtrarProductos();
+        });
+    });
+
+    buscador.addEventListener("input", filtrarProductos);
+</script>
+
+</body>
+</html>
