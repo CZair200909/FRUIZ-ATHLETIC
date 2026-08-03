@@ -152,15 +152,25 @@ const productosFruiz = [
         unidades: 3
     },
 
-    {
-        codigo: "IH2115",
-        nombre: "Predator Club TF",
-        marca: "Adidas",
-        categoria: "futbol",
-        publico: "Hombre",
-        tallas: ["8½"],
-        unidades: 1
-    }
+{
+    codigo: "IH2115",
+    nombre: "Predator Club TF",
+    marca: "Adidas",
+    categoria: "futbol",
+    publico: "Hombre",
+    tallas: ["8½"],
+    unidades: 1
+},
+
+{
+    codigo: "PHANTOM-GX2",
+    nombre: "Phantom GX II Club TF",
+    marca: "Nike",
+    categoria: "futbol",
+    publico: "Hombre",
+    tallas: ["9"],
+    unidades: 1
+}
 
 ];
 
