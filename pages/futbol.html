@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Fútbol | Fruiz Athletic</title>
+
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <link
+        rel="stylesheet"
+        href="../style.css"
+    >
+
+</head>
+
+
+<body>
+
+
+<!-- ==============================
+HEADER
+============================== -->
+
+<header class="header">
+
+    <div class="container">
+
+        <a
+            class="logo"
+            href="../index.html"
+        >
+
+            <img
+                src="../images/logo.png"
+                alt="Fruiz Athletic"
+            >
+
+        </a>
+
+
+        <nav class="nav">
+
+            <a href="../index.html">
+                Inicio
+            </a>
+
+            <a href="zapatillas.html">
+                Zapatillas
+            </a>
+
+            <a href="futbol.html">
+                Fútbol
+            </a>
+
+            <a href="accesorios.html">
+                Accesorios
+            </a>
+
+        </nav>
+
+
+        <div class="search">
+
+            <input
+                id="buscadorFutbol"
+                type="search"
+                placeholder="Buscar botines..."
+            >
+
+            <button
+                type="button"
+                aria-label="Buscar"
+            >
+                🔍
+            </button>
+
+        </div>
+
+    </div>
+
+</header>
+
+
+<!-- ==============================
+CONTENIDO PRINCIPAL
+============================== -->
+
+<main>
+
+
+    <!-- PORTADA -->
+
+    <section class="catalogo-hero">
+
+        <div class="container catalogo-hero-contenido">
+
+            <p class="catalogo-etiqueta">
+
+                CALZADO PARA FÚTBOL
+
+            </p>
+
+            <h1>Fútbol</h1>
+
+            <p>
+
+                Encuentra botines y zapatillas de fútbol
+                para grass sintético.
+
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- CATÁLOGO -->
+
+    <section class="catalogo">
+
+        <div class="container">
+
+
+            <!-- ENCABEZADO -->
+
+            <div class="catalogo-encabezado">
+
+                <div>
+
+                    <p class="catalogo-subtitulo">
+
+                        MODELOS DISPONIBLES
+
+                    </p>
+
+                    <h2>
+
+                        Zapatillas de fútbol
+
+                    </h2>
+
+                </div>
+
+
+                <p
+                    id="contadorProductos"
+                    class="contador-productos"
+                >
+
+                    2 productos
+
+                </p>
+
+            </div>
+
+
+            <!-- FILTROS -->
+
+            <div class="filtros-marcas">
+
+                <button
+                    class="filtro activo"
+                    data-marca="todos"
+                >
+
+                    Todas
+
+                </button>
+
+
+                <button
+                    class="filtro"
+                    data-marca="adidas"
+                >
+
+                    Adidas
+
+                </button>
+
+            </div>
+
+
+            <!-- PRODUCTOS DE FÚTBOL -->
+
+            <div
+                id="catalogoProductos"
+                class="products catalogo-productos"
+                data-categoria="futbol"
+            >
+            </div>
+
+
+            <!-- SIN RESULTADOS -->
+
+            <div
+                id="sinResultados"
+                class="sin-resultados"
+            >
+
+                <h3>
+
+                    No encontramos productos
+
+                </h3>
+
+                <p>
+
+                    Prueba buscando otro modelo,
+                    marca o código.
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<!-- ==============================
+WHATSAPP FLOTANTE
+============================== -->
+
+<a
+    class="whatsapp-flotante"
+    href="https://wa.me/51934105748?text=Hola,%20quiero%20consultar%20por%20las%20zapatillas%20de%20fútbol%20disponibles."
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Contactar por WhatsApp"
+>
+
+    💬
+
+</a>
+
+
+<!-- ==============================
+FOOTER
+============================== -->
+
+<footer>
+
+    <div class="container footer">
+
+
+        <div>
+
+            <img
+                src="../images/logo.png"
+                alt="Fruiz Athletic"
+                class="footer-logo"
+            >
+
+            <p>
+
+                Zapatillas y artículos deportivos
+                originales.
+
+            </p>
+
+        </div>
+
+
+        <div>
+
+            <h4>Categorías</h4>
+
+            <p>
+                <a href="zapatillas.html">
+                    Zapatillas
+                </a>
+            </p>
+
+            <p>
+                <a href="futbol.html">
+                    Fútbol
+                </a>
+            </p>
+
+            <p>
+                <a href="accesorios.html">
+                    Accesorios
+                </a>
+            </p>
+
+        </div>
+
+
+        <div>
+
+            <h4>Contacto</h4>
+
+            <p>
+
+                <a
+                    href="https://wa.me/51934105748"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+
+                    WhatsApp: 934 105 748
+
+                </a>
+
+            </p>
+
+            <p>
+                Virú, La Libertad
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <p class="copy">
+
+        © 2026 Fruiz Athletic.
+        Todos los derechos reservados.
+
+    </p>
+
+</footer>
+
+
+<!-- CARGAR PRODUCTOS -->
+
+<script src="../catalogo-fruiz.js"></script>
+
+
+</body>
+
+</html>
