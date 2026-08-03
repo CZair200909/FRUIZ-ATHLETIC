@@ -1079,3 +1079,37 @@ transform:scale(1.05);
         min-height: 270px;
     }
 }
+/*======================================
+ETIQUETA DISPONIBLE SOBRE LA FOTO
+======================================*/
+
+.producto-imagen-contenedor{
+    position:relative;
+    overflow:hidden;
+}
+
+.producto-imagen-contenedor img{
+    position:relative;
+    z-index:1;
+}
+
+.producto-distintivo{
+    position:absolute;
+    top:18px;
+    left:18px;
+    z-index:10;
+
+    display:block;
+    padding:8px 14px;
+
+    background:#071f2c;
+    color:#37b9ff;
+
+    border:1px solid rgba(55,185,255,.25);
+    border-radius:30px;
+
+    font-size:11px;
+    font-weight:800;
+    letter-spacing:1px;
+    white-space:nowrap;
+}
