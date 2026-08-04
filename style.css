@@ -729,14 +729,7 @@ grid-template-columns:1fr;
 }
 
 }
-body{
-    background:red !important;
-}
 
-h1{
-    color:yellow !important;
-    font-size:100px !important;
-}
 /*=============================
 PRODUCTOS DESTACADOS
 ==============================*/
@@ -1212,6 +1205,83 @@ MENÚ PARA CELULAR
 
     .nav a::after{
         display:none;
+    }
+
+}
+/*======================================
+CORRECCIÓN DE PORTADA EN CELULAR
+======================================*/
+
+body{
+    background:#080808 !important;
+}
+
+.hero-content h1{
+    color:#ffffff !important;
+    max-width:900px;
+    margin-left:auto;
+    margin-right:auto;
+    overflow-wrap:normal;
+    word-break:normal;
+}
+
+@media(max-width:768px){
+
+    .hero{
+        width:100%;
+        min-height:100svh;
+        height:auto;
+        padding:135px 18px 90px;
+        overflow:hidden;
+    }
+
+    .hero-content{
+        width:100%;
+        max-width:600px;
+        padding:0 10px;
+    }
+
+    .hero-content h1{
+        width:100%;
+        font-size:42px !important;
+        line-height:1.08;
+        color:#ffffff !important;
+        text-align:center;
+        margin:25px auto 20px;
+    }
+
+    .hero-content p{
+        width:100%;
+        max-width:360px;
+        margin:0 auto 35px;
+        padding:0 5px;
+        font-size:16px;
+        line-height:1.6;
+        text-align:center;
+    }
+
+    .tag{
+        max-width:90%;
+        padding:10px 20px;
+        font-size:12px;
+        text-align:center;
+    }
+
+    .btn{
+        padding:15px 35px;
+        font-size:15px;
+    }
+
+}
+
+@media(max-width:400px){
+
+    .hero-content h1{
+        font-size:36px !important;
+    }
+
+    .hero-content p{
+        font-size:15px;
     }
 
 }
